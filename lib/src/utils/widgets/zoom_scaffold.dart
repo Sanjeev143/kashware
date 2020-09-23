@@ -44,7 +44,8 @@ class _ZoomScaffoldState extends State<ZoomScaffold>
                 onPressed: () {},
                 icon: Icon(
                   Icons.refresh,
-                  color: Colors.white,
+                  color: Colors.blue,
+                  size: 18,
                 ),
               )
             ]),

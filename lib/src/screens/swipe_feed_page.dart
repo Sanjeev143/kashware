@@ -17,46 +17,35 @@ class _SwipeFeedPageState extends State<SwipeFeedPage> {
     return Scaffold(
       backgroundColor: primary,
       body: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           CardsSectionDraggable(),
-          buttonsRow()
-        ],
-      ),
-    );
-  }
-
-  Widget buttonsRow() {
-    return Container(
-      margin: EdgeInsets.symmetric(vertical: 48.0),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: <Widget>[
-          FloatingActionButton(
-            mini: true,
-            onPressed: () {},
-            backgroundColor: Colors.white,
-            child: Icon(Icons.loop, color: Colors.yellow),
+          InkWell(
+            child: Center(
+              child: Container(
+                width: 100.0,
+                alignment: Alignment.center,
+                padding: EdgeInsets.only(left: 5.0,top: 5.0, right: 5.0, bottom: 5.0),
+                decoration: BoxDecoration(
+                  color: Colors.blue,
+                  borderRadius: BorderRadius.all(Radius.circular(5.0)),
+                ),
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    // Image.asset('assets/images/share.png'),
+                    Icon(Icons.share, color: Colors.white,size: 14.0,),
+                    Text('Share',style: TextStyle(color: Colors.white,fontSize: 18.0),)
+                  ],
+                ),
+              ),
+            ),
+            onTap: (){},
           ),
-          Padding(padding: EdgeInsets.only(right: 8.0)),
-          FloatingActionButton(
-            onPressed: () {},
-            backgroundColor: Colors.white,
-            child: Icon(Icons.close, color: Colors.red),
-          ),
-          Padding(padding: EdgeInsets.only(right: 8.0)),
-          FloatingActionButton(
-            onPressed: () {},
-            backgroundColor: Colors.white,
-            child: Icon(Icons.favorite, color: Colors.green),
-          ),
-          Padding(padding: EdgeInsets.only(right: 8.0)),
-          FloatingActionButton(
-            mini: true,
-            onPressed: () {},
-            backgroundColor: Colors.white,
-            child: Icon(Icons.star, color: Colors.blue),
-          ),
+          SizedBox(height: 10.0,)
+          // buttonsRow()
         ],
       ),
     );

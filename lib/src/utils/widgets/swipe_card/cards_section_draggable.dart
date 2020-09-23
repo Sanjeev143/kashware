@@ -36,21 +36,21 @@ class _CardsSectionState extends State<CardsSectionDraggable> {
             ),
             // Back card
             Align(
-              alignment: Alignment(0.0, 1.0),
+              alignment: Alignment(0.0, 0.6),
               child: IgnorePointer(
                   child: SizedBox.fromSize(
-                    size: Size(MediaQuery.of(context).size.width * 0.8,
-                        MediaQuery.of(context).size.height * 0.5),
+                    size: Size(MediaQuery.of(context).size.width * 0.86,
+                        MediaQuery.of(context).size.height * 0.72),
                     child: cards[2],
                   )),
             ),
             // Middle card
             Align(
-              alignment: Alignment(0.0, 0.8),
+              alignment: Alignment(0.0, 0.3),
               child: IgnorePointer(
                   child: SizedBox.fromSize(
-                    size: Size(MediaQuery.of(context).size.width * 0.85,
-                        MediaQuery.of(context).size.height * 0.55),
+                    size: Size(MediaQuery.of(context).size.width * 0.88,
+                        MediaQuery.of(context).size.height * 0.72),
                     child: cards[1],
                   )),
             ),
@@ -60,12 +60,12 @@ class _CardsSectionState extends State<CardsSectionDraggable> {
               child: Draggable(
                 feedback: SizedBox.fromSize(
                   size: Size(MediaQuery.of(context).size.width * 0.9,
-                      MediaQuery.of(context).size.height * 0.6),
+                      MediaQuery.of(context).size.height * 0.73),
                   child: cards[0],
                 ),
                 child: SizedBox.fromSize(
                   size: Size(MediaQuery.of(context).size.width * 0.9,
-                      MediaQuery.of(context).size.height * 0.6),
+                      MediaQuery.of(context).size.height * 0.73),
                   child: cards[0],
                 ),
                 childWhenDragging: Container(),
